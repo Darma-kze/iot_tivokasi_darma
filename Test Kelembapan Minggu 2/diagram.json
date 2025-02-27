@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Ardi Darma ",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": { "builder": "esp-idf" }
+    },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -47.7, "left": -149.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v57.6", "h76.8", "v-96" ] ],
+    [ "dht1:SDA", "esp:27", "green", [ "v67.2", "h129.51" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
