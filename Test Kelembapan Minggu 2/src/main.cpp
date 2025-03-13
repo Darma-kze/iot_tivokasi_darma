@@ -14,6 +14,7 @@ void setup() {
   dht.begin();
 }
 
+
 void loop() {
 
   delay(500);
